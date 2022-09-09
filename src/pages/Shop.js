@@ -1,30 +1,16 @@
 import "../styles/shop.css";
-import GreyNike from "../images/grey_nike.jpg";
+import { productsData } from "../productsData";
+import Product from "../components/Product";
 
 const Shop = () => {
+  const products = productsData.map((item) => {
+    return <Product key={item.id} item={item} />;
+  });
+
   return (
     <div>
       <main className="main">
-        <section className="products">
-          <div className="items">
-            <img className="item-image" src={GreyNike} alt="Grey Nike" />
-            <p className="item-name">Grey Nike</p>
-            <p className="item-price">$49.99</p>
-            <button className="add-item-btn">Add to Cart</button>
-          </div>
-          <div className="items">
-            <img className="item-image" src={GreyNike} alt="Grey Nike" />
-            <p className="item-name">Grey Nike</p>
-            <p className="item-price">$49.99</p>
-            <button className="add-item-btn">Add to Cart</button>
-          </div>
-          <div className="items">
-            <img className="item-image" src={GreyNike} alt="Grey Nike" />
-            <p className="item-name">Grey Nike</p>
-            <p className="item-price">$49.99</p>
-            <button className="add-item-btn">Add to Cart</button>
-          </div>
-        </section>
+        <section className="products">{products}</section>
       </main>
     </div>
   );
