@@ -1,0 +1,52 @@
+body {
+  background: #f1f1f1;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 35px;
+}
+
+.items {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 7px;
+  margin: 0 auto;
+}
+
+.item-image {
+  width: 300px;
+  height: 380px;
+  /* border-radius: 10px; */
+}
+
+.item-name {
+  font-size: 1.5rem;
+}
+
+.item-price {
+  padding-left: 3px;
+  font-weight: bold;
+}
+
+.add-item-btn {
+  background: #000;
+  color: #fff;
+  padding: 12px 21px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.add-item-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
