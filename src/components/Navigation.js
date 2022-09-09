@@ -7,7 +7,7 @@ const Navigation = () => {
       <header className="header">
         <div className="header-container">
           <div className="container">
-            <h1 className="company-name">StoreCom</h1>
+            <h1 className="company-name">ShopCom</h1>
           </div>
           <nav className="navbar">
             <li className="nav-links">
@@ -17,7 +17,7 @@ const Navigation = () => {
             </li>
             <li className="nav-links">
               <Link className="links" to="/shop">
-                Store
+                Shop
               </Link>
             </li>
           </nav>
