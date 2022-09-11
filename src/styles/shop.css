@@ -51,3 +51,39 @@ body {
 .add-item-btn:hover {
   background: rgba(0, 0, 0, 0.8);
 }
+
+/*========== Shopping cart style ==========*/
+.shopping-cart-container {
+  /* background: lightblue; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.shopping-cart {
+  position: fixed;
+  background: orangered;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  /* margin-left: 130px;
+  margin-top: 450px; */
+  margin-left: 40px;
+  margin-top: 450px;
+}
+
+.items-count {
+  position: fixed;
+  background: rgb(223, 40, 40);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 2px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  /* margin-left: 130px;
+  margin-top: 505px; */
+  margin-top: 508px;
+  margin-right: 10px;
+}
