@@ -69,6 +69,11 @@ body {
   margin-top: 450px; */
   margin-left: 40px;
   margin-top: 450px;
+  cursor: pointer;
+}
+
+.shopping-cart:hover {
+  background: rgb(181, 54, 0);
 }
 
 .items-count {
