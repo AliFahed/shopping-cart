@@ -3,7 +3,7 @@
 }
 
 .view-shopping-cart-container {
-  display: block;
+  /* display: block; */
 }
 
 .items-container {
@@ -13,11 +13,12 @@
 
 .wrapper {
   background: orangered;
-  position: absolute;
+  position: fixed;
   padding: 40px 60px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border-radius: 10px;
 }
 
 .title {

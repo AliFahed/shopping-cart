@@ -8,12 +8,11 @@ import "../styles/viewItems.css";
 const Shop = () => {
   const [addItem, setAddItem] = React.useState(0);
 
-  // below function is passed to Product.js Component
   const handleAddToCartBtn = () => {
     setAddItem((prevItem) => prevItem + 1);
   };
 
-  const viewItems = () => {
+  const viewItemsContainer = () => {
     const hideContainer = document.querySelector(
       ".hide-shopping-cart-container"
     );
@@ -22,7 +21,7 @@ const Shop = () => {
     hideContainer.classList.remove("hide-shopping-cart-container");
   };
 
-  const hideItems = () => {
+  const hideItemsContainer = () => {
     const viewContainer = document.querySelector(
       ".view-shopping-cart-container"
     );
@@ -49,7 +48,7 @@ const Shop = () => {
             className="shopping-cart"
             src={ShoppingBag}
             alt="shopping bag"
-            onClick={viewItems}
+            onClick={viewItemsContainer}
           />
           <div className="items-count">{addItem}</div>
         </div>
@@ -58,18 +57,16 @@ const Shop = () => {
           <div className="items-container">
             <div className="wrapper">
               <h2 className="title">Your Shopping Cart</h2>
-              <div className="selected-items-container">
-                here should have any item when press add to cart btn
-              </div>
+              <div className="selected-items-container">items chosen</div>
               <div className="items-details-container">
-                <p className="items-number">No. of Items: {addItem}</p>
+                <p className="items-number">No. of Items: 4</p>
                 <p className="total-amount">Total amount: $100</p>
               </div>
               <div className="buttons-container">
-                <button className="back-btn" onClick={hideItems}>
+                <button className="back-btn" onClick={hideItemsContainer}>
                   Back to Shopping
                 </button>
-                <button className="proceed-btn">Procedd to Payment</button>
+                <button className="proceed-btn">Proceed to Payment</button>
               </div>
             </div>
           </div>
