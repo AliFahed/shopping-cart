@@ -21,7 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 140px;
   font-size: 1.5rem;
 }
 
@@ -32,7 +32,8 @@
 
 .selected-items-container {
   background: #f1f1f1;
-  height: 180px;
+  min-height: 140px;
+  max-height: 230px;
   overflow-y: scroll;
 }
 
@@ -42,11 +43,12 @@
   gap: 25px;
   align-items: center;
   margin-bottom: 10px;
+  padding: 10px;
 }
 
 .selected-item-image {
   width: 110px;
-  height: 130px;
+  height: 135px;
 }
 
 .item-details {

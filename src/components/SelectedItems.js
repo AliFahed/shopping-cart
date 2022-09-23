@@ -11,7 +11,7 @@ const SelectedItems = (props) => {
       />
       <div className="item-details">
         <p className="selected-item-title">{props.item.title}</p>
-        <p className="selected-item-price">{props.item.price}</p>
+        <p className="selected-item-price">${props.item.price}</p>
       </div>
     </div>
   );

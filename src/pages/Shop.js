@@ -34,14 +34,18 @@ const Shop = () => {
   const [selectedItem, setSelectedItem] = React.useState([]);
 
   const viewSelectedItems = (item) => {
-    // setSelectedItem(item);
     selectedItem.push(item);
-    console.log(selectedItem);
   };
 
   const shoppingCart = selectedItem.map((item) => {
     return <SelectedItems key={item.id} item={item} />;
   });
+
+  const [totalAmount, setTotalAmount] = React.useState(0);
+
+  const calculateTotalAmount = (item) => {
+    setTotalAmount((prevAmount) => prevAmount + item.price);
+  };
 
   const products = productsData.map((item) => {
     return (
@@ -49,6 +53,7 @@ const Shop = () => {
         key={item.id}
         item={item}
         handleAddToCartBtn={handleAddToCartBtn}
+        calculateTotalAmount={() => calculateTotalAmount(item)}
         viewSelectedItems={() => viewSelectedItems(item)}
       />
     );
@@ -79,8 +84,10 @@ const Shop = () => {
                 )}
               </div>
               <div className="items-details-container">
-                <p className="items-number">No. of Items: 4</p>
-                <p className="total-amount">Total amount: $100</p>
+                <p className="items-number">
+                  No. of Items: {selectedItem.length}
+                </p>
+                <p className="total-amount">Total amount: ${totalAmount}</p>
               </div>
               <div className="buttons-container">
                 <button className="back-btn" onClick={hideItemsContainer}>
