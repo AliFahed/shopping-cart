@@ -50,3 +50,18 @@
     gap: 20px;
   }
 }
+
+@media (max-width: 530px) {
+  .company-name {
+    font-size: 1.6rem;
+  }
+
+  .navbar {
+    gap: 10px;
+  }
+
+  .links {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
