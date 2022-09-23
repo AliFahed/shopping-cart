@@ -11,6 +11,7 @@ const Product = (props) => {
         className="add-item-btn"
         onClick={(event) => {
           props.handleAddToCartBtn();
+          props.viewSelectedItems();
         }}
       >
         {props.item.buttonText}

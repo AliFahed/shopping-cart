@@ -26,6 +26,14 @@
   text-align: center;
 }
 
+.selected-items-container {
+  background: lightblue;
+}
+
+.selected-item-image {
+  width: 100px;
+}
+
 .items-number,
 .total-amount {
   font-size: 1.4rem;
