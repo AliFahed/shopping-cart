@@ -4,6 +4,7 @@ import { productsData } from "../productsData";
 import Product from "../components/Product";
 import ShoppingBag from "../images/shopping-bag.jpg";
 import "../styles/viewItems.css";
+import SelectedItems from "../components/SelectedItems";
 
 const Shop = () => {
   const [addItem, setAddItem] = React.useState(0);
@@ -30,12 +31,17 @@ const Shop = () => {
     viewContainer.classList.remove("view-shopping-cart-container");
   };
 
-  const [selectedItem, setSelectedItem] = React.useState("");
+  const [selectedItem, setSelectedItem] = React.useState([]);
 
   const viewSelectedItems = (item) => {
-    setSelectedItem(item);
-    // console.log(selectedItem);
+    // setSelectedItem(item);
+    selectedItem.push(item);
+    console.log(selectedItem);
   };
+
+  const shoppingCart = selectedItem.map((item) => {
+    return <SelectedItems key={item.id} item={item} />;
+  });
 
   const products = productsData.map((item) => {
     return (
@@ -66,18 +72,10 @@ const Shop = () => {
             <div className="wrapper">
               <h2 className="title">Your Shopping Cart</h2>
               <div className="selected-items-container">
-                {selectedItem === "" ? (
+                {selectedItem.length === 0 ? (
                   <p className="empty-cart-text">No items yet.</p>
                 ) : (
-                  <div className="selected-items-container">
-                    <img
-                      src={selectedItem.img}
-                      alt="selected item"
-                      className="selected-item-image"
-                    />
-                    <p className="selected-item-title">{selectedItem.title}</p>
-                    <p className="selected-item-price">{selectedItem.price}</p>
-                  </div>
+                  shoppingCart
                 )}
               </div>
               <div className="items-details-container">
