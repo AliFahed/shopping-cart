@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.f49d5bda.css",
-    "main.js": "/shopping-cart/static/js/main.d89c51bb.js",
+    "main.js": "/shopping-cart/static/js/main.9d7f20fd.js",
     "static/media/red_nike.jpg": "/shopping-cart/static/media/red_nike.767417bea17688d6d8ce.jpg",
     "static/media/blue_black_nike.jpg": "/shopping-cart/static/media/blue_black_nike.cd66a0fcc22e0283724d.jpg",
     "static/media/standard_white_nike.jpg": "/shopping-cart/static/media/standard_white_nike.56cced14b848924fbb03.jpg",
@@ -11,10 +11,10 @@
     "static/media/grey_nike.jpg": "/shopping-cart/static/media/grey_nike.f511f38ec3e678770d5c.jpg",
     "index.html": "/shopping-cart/index.html",
     "main.f49d5bda.css.map": "/shopping-cart/static/css/main.f49d5bda.css.map",
-    "main.d89c51bb.js.map": "/shopping-cart/static/js/main.d89c51bb.js.map"
+    "main.9d7f20fd.js.map": "/shopping-cart/static/js/main.9d7f20fd.js.map"
   },
   "entrypoints": [
     "static/css/main.f49d5bda.css",
-    "static/js/main.d89c51bb.js"
+    "static/js/main.9d7f20fd.js"
   ]
 }
